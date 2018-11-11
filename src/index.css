@@ -1,14 +1,215 @@
+@import "css/fonts.min.css";
+@import "css/semantic.min.css";
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font-family: "Proxima Nova",sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.uk-card-primary {
+    background-color: #55ca99 !important;
+}
+
+.thinp {
+    font-size: 0.5rem;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a{
+    font-family: "Proxima Nova",sans-serif;
+}
+
+.uk-box-shadow-hover-large:hover {
+    -webkit-box-shadow: 0 14px 25px rgba(0, 0, 0, .16);
+    box-shadow: 0 14px 25px rgba(0, 0, 0, .36);
+}
+
+.border-bottom{
+    border-bottom: 1px solid #e29090;
+}
+
+.logo{
+    height: 70px;
+    width: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+ /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+ /*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.imgHolder{
+    height: 100px;
+}
+
+.imgHolder img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.patient{
+    background-color: #fff;
+}
+body{
+    border-top: 5px solid #1b61a3;
+    background: #f8f6f6;
+}
+
+section{
+    background: #f8f8f8;
+}
+
+header.header{
+    height: 99vh;
+    background-color: #ededed!important;
+}
+
+#nav{
+    position: relative;
+    z-index: 9 ;
+}
+
+.Logo{
+    position: relative;
+    height: 100px;
+    top: 30px!important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.uk-button-def{
+    background-color: #4b9771;
+    color: #ffffff;
+}
+
+.divided:after{
+    content: "";
+    height: 1.5em;
+    margin-left: 9px;
+    margin-right: 9px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.divider{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.info p{
+    line-height: 2;
+}
+
+.uk-link-dec, .uk-link-dec:hover{
+    text-decoration: none;
+}
+.ui.attached.segment {
+    border: 0px solid #d4d4d5;
+}
+
+.ReactTable .rt-tbody .rt-td {
+    text-align: center;
+}
+
+.ReactTable .rt-thead.-header{
+    box-shadow: none !important;
+    font-weight: bolder;
+}
+
+#documents .ReactTable .rt-thead .rt-th.-cursor-pointer, .ReactTable .rt-thead .rt-td.-cursor-pointer {
+    background-color: #1b61a3!important;
+    color: #ffffff;
+}
+#documents .rt-tr .rt-td:last-child{
+    color: #1b61a3;
+}
+.ReactTable .rt-thead .rt-th, .ReactTable .rt-thead .rt-td {
+    line-height: 2.3;
+}
+/*.ui.dropdown {*/
+    /*cursor: pointer;*/
+    /*position: absolute;*/
+/*}*/
+.ui.icon.button, .ui.icon.buttons .button {
+    padding: .27em .78571429em .27em;
+    position: absolute;
+    transform: translateY(-30%);
+}
+.griddle-table{
+    width: 100%;
+    overflow-x: auto;
+}
+.griddle-table td{
+    text-align: center;
+}
+
+button.success{
+    background-color: #38b768;
+    color: #ffffff;
+}
+
+button.success:hover{
+    background-color: #37a052;
+    color: #ffffff;
+}
+button.success:active{
+    background-color: #278549;
+    color: #ffffff;
+}
+
+.simple-menu>div>ul>li{
+    height: 10px!important;
+}
+
+.simple-menu>div>ul{
+    padding: 0;
+}
+
+div.rt-td{
+    align-self: center;
+}
+
+#container {
+    max-width: 800px;
+    min-width: 380px;
+    height: 400px;
+    margin: 1em auto;
+}
+
+.rem-under,.rem-under:active,.rem-under:hover{
+    text-decoration: none;
+}
+
+.min-50{
+    min-width: calc((50%)/3);
 }
