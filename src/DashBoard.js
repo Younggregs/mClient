@@ -80,7 +80,7 @@ class DashBoard extends Component {
           component: 'WalletIndex'
         },
         {id: 8, 
-          link: '/storeMicroservice', 
+          link: '/dashboard/storeMicroservice', 
           icon: 'cart', 
           title: 'Store', 
           width: 'uk-width-1-3@m', 
@@ -126,7 +126,7 @@ class DashBoard extends Component {
           <Route exact path='/dasboard/pharmacyMicroservice' component={PharmacyIndex}/>
           <Route exact path='/radiographyMicroservice' component={RadiographyIndex}/>
           <Route exact path='/walletMicroservice' component={WalletIndex}/>          
-          <Route exact path='/storeMicroservice' component={StoreIndex}/> 
+          <Route exact path='/dashboard/storeMicroservice' component={ StoreIndex }/> 
         </Switch>
       </header>
     );

@@ -26,7 +26,7 @@ componentWillMount(){
     status: this.props.data.status,
     token: this.props.data.token,
     user: this.props.data.data,
-    isLoggedIn: this.props.data.token !== null ? true : false
+    isLoggedIn: this.props.data.token === null ? true : false
   })
 }
 //*/
@@ -55,7 +55,7 @@ componentWillMount(){
         {route}
         <Switch>
           <Route exact path='/login' component={ Login }/>
-          <Route exact path='/dashboard' component={ Dashboard }/>
+          <Route  path='/dashboard' component={ Dashboard }/>
         </Switch>
       </div>
     )       
