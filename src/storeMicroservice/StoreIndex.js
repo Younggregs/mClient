@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { getStore } from './store/actions';
 
 class Store extends Component {
-
     constructor(props){
         super(props);
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-
 import InfoCard from './common/components/InfoCard';
 import Navbar from './common/components/NavBar';
 import HospitalIndex from './hospitalMicroservice/HospitalIndex';
@@ -14,8 +13,8 @@ import RadiographyIndex from './radiographyMicroservice/RadiographyIndex';
 import WalletIndex from './walletMicroservice/WalletIndex';
 import StoreIndex from './storeMicroservice/StoreIndex';
 
-class DashBoard extends Component {
 
+class DashBoard extends Component {
   componentDidMount(){
     console.log('INSIDE DASHBOARD', this.props)
   }
@@ -118,14 +117,14 @@ class DashBoard extends Component {
         <Navbar />
         {this.displayCards()}
         <Switch>
-          <Route exact path='/dashboard/hospitalMicroservice' component={HospitalIndex}/>
-          <Route exact path={`${this.props.match.path}/hrMicroservice`} component={HRIndex}/>
+          <Route  path='/dashboard/hospitalMicroservice' component={HospitalIndex}/>
+          <Route exact path='/dashboard/hrMicroservice' component={HRIndex}/>
           <Route exact path='/dasboard/doctorsMicroservice' component={DoctorIndex}/>
           <Route exact path='/dashboard/labsMicroservice' component={LabIndex}/> 
           <Route exact path='/dashboard/patient' component={PatientsIndex}/>
           <Route exact path='/dasboard/pharmacyMicroservice' component={PharmacyIndex}/>
-          <Route exact path='/radiographyMicroservice' component={RadiographyIndex}/>
-          <Route exact path='/walletMicroservice' component={WalletIndex}/>          
+          <Route exact path='/dasboard/radiographyMicroservice' component={RadiographyIndex}/>
+          <Route exact path='/dasboard/walletMicroservice' component={WalletIndex}/>          
           <Route exact path='/dashboard/storeMicroservice' component={ StoreIndex }/> 
         </Switch>
       </header>

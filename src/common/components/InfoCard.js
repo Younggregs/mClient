@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Icon } from 'semantic-ui-react'
 import {Link} from "react-router-dom";
-// import './App.css';
 
 class InfoCard extends Component {
   render() {

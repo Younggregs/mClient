@@ -4,12 +4,7 @@ import './App.css';
 import Dashboard from './DashBoard';
 import Login from './auth/component/Login';
 
-
-
-//let route
-
 class App extends Component {
-  
   state = {
     status: null,
     token: null,
@@ -17,9 +12,7 @@ class App extends Component {
     isLoggedIn: false
   }
 
-
 componentWillMount(){
-  ///*
   if( this.props.data !== null ){
   this.setState({
     ...this.state,
@@ -29,7 +22,6 @@ componentWillMount(){
     isLoggedIn: this.props.data.token === null ? true : false
   })
 }
-//*/
   console.log('COMPONENT WILL MOUNT',this.props)
 }
 
@@ -61,6 +53,5 @@ componentWillMount(){
     )       
   }
 }
-
 
 export default App;
