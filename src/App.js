@@ -3,6 +3,15 @@ import {  Switch, Route, Redirect} from 'react-router-dom';
 import './App.css';
 import Dashboard from './DashBoard';
 import Login from './auth/component/Login';
+import HospitalIndex from './hospitalMicroservice/HospitalIndex';
+import LabIndex from './labsMicroservice/LabIndex';
+import HRIndex from './hrMicroservice/HRIndex';
+import DoctorIndex from './doctorsMicroservice/DoctorIndex';
+import PatientsIndex from './patientsMicroservice/PatientsIndex';
+import PharmacyIndex from './pharmacyMicroservice/PharmacyIndex';
+import RadiographyIndex from './radiographyMicroservice/RadiographyIndex';
+import WalletIndex from './walletMicroservice/WalletIndex';
+import StoreIndex from './storeMicroservice/StoreIndex';
 
 class App extends Component {
   state = {
@@ -13,7 +22,7 @@ class App extends Component {
   }
 
 componentWillMount(){
-  if( this.props.data !== null ){
+  if(this.props.data){
   this.setState({
     ...this.state,
     status: this.props.data.status,
@@ -30,14 +39,14 @@ componentWillMount(){
     if(!this.state.isLoggedIn){
       route = (
         <Switch>
-          <Redirect to='/dashboard' from='/login'/>
+          <Redirect to='/dashboard' from='/'/>
         </Switch>
       )
     }
     else {
-        route = ( 
+        route = (
         <Switch>
-            <Redirect to='/login' from='/dashboard' />
+            <Redirect to='/' from='/dashboard' />
         </Switch>
       )
     }
@@ -46,11 +55,20 @@ componentWillMount(){
       <div>
         {route}
         <Switch>
-          <Route exact path='/login' component={ Login }/>
-          <Route  path='/dashboard' component={ Dashboard }/>
+          <Route exact path='/' component={ Login }/>
+          <Route exact path='/dashboard' component={ Dashboard }/>
+          <Route exact path='/dashboard/hospitalMicroservice' component={HospitalIndex}/>
+          <Route exact path='/dashboard/hrMicroservice' component={HRIndex}/>
+          <Route exact path='/dashboard/doctorsMicroservice' component={DoctorIndex}/>
+          <Route exact path='/dashboard/labsMicroservice' component={LabIndex}/>
+          <Route exact path='/dashboard/patient' component={PatientsIndex}/>
+          <Route exact path='/dashboard/pharmacyMicroservice' component={PharmacyIndex}/>
+          <Route exact path='/dashboard/radiographyMicroservice' component={RadiographyIndex}/>
+          <Route exact path='/dashboard/walletMicroservice' component={WalletIndex}/>
+          <Route exact path='/dashboard/storeMicroservice' component={ StoreIndex }/>
         </Switch>
       </div>
-    )       
+    )
   }
 }
 
