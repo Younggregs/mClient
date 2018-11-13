@@ -49,7 +49,7 @@ class Login extends Component{
 
     render(){
         return (
-            <div className="Login" >
+            <div className="Login">
                 <h1>HR Microservice</h1>
                 <Button>action</Button>
             </div>
